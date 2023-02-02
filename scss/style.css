@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*Variabler*/
+/*Mixins*/
+/*kald på lokal element- ændre justify content*/
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+body p {
+  font-size: 16px;
+  color: #484848;
+  line-height: 1.5;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-weight: 600;
+  color: #484848;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: min-max(50px, auto);
+}
+
+.header {
+  grid-column: 1/6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 4px solid #3A8479;
+}
+
+/*Nesting*//*# sourceMappingURL=style.css.map */

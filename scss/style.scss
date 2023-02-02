@@ -1,0 +1,56 @@
+/*Variabler*/
+
+$bg-color:#f0f0f0;
+$nav-color:#ffffff;
+$footer-color:#0A1f1C;
+$primary-color:#3A8479;
+$secondary-color:#132833;
+$text-color:#484848;
+$padding: 0.5 em;
+$font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/*Mixins*/
+@mixin flex($justify:center , $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+/*kald på lokal element- ændre justify content*/
+
+body{
+    margin:0;
+    box-sizing: border-box;
+    font-family:$font;
+    background-color:$bg-color;
+    p{
+        font-size: 16px;
+        color:$text-color;
+        line-height: 1.5;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-weight: 600;
+        color:$text-color;
+    }
+}
+
+img{
+    width:100%;
+    height:auto;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: repeat(5,1fr) ;
+    grid-auto-rows:min-max(50px,auto);
+    
+}
+
+.header{
+    grid-column:1/6;
+    @include flex($justify:space-between);
+    background-color:$bg-color;
+    border-bottom:4px solid $primary-color;
+
+}
+
+/*Nesting*/
